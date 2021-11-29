@@ -1089,9 +1089,7 @@ def reader(stdscr, ebook, index, width, y, pctg):
         if svline != "dontsave":
             pad.chgat(svline, 0, width, curses.A_UNDERLINE)
         try:
-            stdscr.clear()
             stdscr.addstr(0, 0, countstring)
-            stdscr.refresh()
             if totlines - y < rows:
                 pad.refresh(y,0, 0,x, totlines-y,x+width)
             else:
